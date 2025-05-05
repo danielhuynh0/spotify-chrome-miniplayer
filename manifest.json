@@ -1,0 +1,46 @@
+{
+    "manifest_version": 3,
+    "name": "Spotify Mini Player",
+    "description": "Control Spotify playback and view album art in a floating mini-player.",
+    "version": "1.0",
+    "permissions": [
+        "identity",
+        "storage",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://api.spotify.com/*"
+    ],
+    "oauth2": {
+        "client_id": "989eb93ea35e40299ce39d43d748764a",
+        "scopes": [
+            "user-read-playback-state",
+            "user-modify-playback-state",
+            "user-read-currently-playing"
+        ]
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "styles.css"
+            ]
+        }
+    ]
+}
