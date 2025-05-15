@@ -8,3 +8,5 @@ I always listen to music while working. This means spending lots of hours with G
 - Turn on developer mode
 - Click `Load unpacked` and select the `spotify-extension` folder you just downloaded
 - Open a new tab, and start listening!
+
+![image](https://github.com/user-attachments/assets/6b90cae9-9c9a-44c7-aa09-18e7c921494f)
