@@ -4,6 +4,9 @@ const SCOPES = manifest.oauth2.scopes.join(' ');
 const REDIRECT_URI = chrome.identity.getRedirectURL();
 
 // apparently spotify requires a code challenge now to do api calls?
+// use the PKCE auth method: https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-pkce
+// https://medium.com/identity-beyond-borders/what-the-heck-is-pkce-40662e801a76
+// https://blog.postman.com/what-is-pkce/
 function generateCodeVerifier(length = 64) {
     const array = new Uint8Array(length);
     crypto.getRandomValues(array);
